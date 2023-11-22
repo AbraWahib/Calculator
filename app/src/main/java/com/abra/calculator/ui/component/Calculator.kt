@@ -29,7 +29,6 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -41,10 +40,12 @@ import com.abra.calculator.model.CalculatorButton
 import com.abra.calculator.model.CalculatorState
 import com.abra.calculator.ui.theme.Cyan
 import com.abra.calculator.ui.theme.Orange
+import com.abra.calculator.viewModel.ThemeViewModel
 
 @Composable
 fun Calculator(state: CalculatorState,
                onAction: (CalculatorAction) -> Unit,
+               themeViewModel: ThemeViewModel,
                modifier: Modifier = Modifier) {
 
     //list of button objects that will be passed to LazyGrid
@@ -110,7 +111,7 @@ fun Calculator(state: CalculatorState,
 
 
     //calculator toggle for theme changing
-    CalculatorThemeToggle()
+    CalculatorThemeToggle(themeViewModel)
 }
 
 // Ui for a single button

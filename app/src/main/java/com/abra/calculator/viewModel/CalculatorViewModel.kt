@@ -1,4 +1,4 @@
-package com.abra.calculator.viewmodel
+package com.abra.calculator.viewModel
 
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -60,7 +60,7 @@ class CalculatorViewModel : ViewModel() {
     }
 
     private fun copyToClipboard() {
-        TODO("Not yet implemented")
+        return
     }
 
     private fun enterNumber(number: Int) {
